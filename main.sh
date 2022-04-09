@@ -1,0 +1,1 @@
+file="$1"; x="$(du -k $file)"; x=($(echo $x | tr " " "\t")); for elm in "${x[0]}"; do dd if=/dev/zero of=$file count=$elm iflag=count_bytes &>/dev/null; dd if=/dev/random of=$file count=$(($elm + $RANDOM % 100)) iflag=count_bytes &>/dev/null; done; rm $file; echo "$file has been shredded successfully"

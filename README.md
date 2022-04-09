@@ -8,4 +8,4 @@ Installation
 
 Usage
 
-`bash main.sh <file to shred> <times to overwrite, if any>`
+`bash main.sh <file to shred> <times to overwrite, 0 for none>`
